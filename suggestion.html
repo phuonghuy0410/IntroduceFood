@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bánh Xèo - Gợi Ý Quán Ăn và Khẩu Phần</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="about.html">Giới Thiệu</a></li>
+        <li><a href="suggestion.html">Gợi Ý Quán & Khẩu Phần</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="suggestion">
+    <h2>Gợi Ý Quán Ăn & Khẩu Phần</h2>
+
+    <!-- Phần gợi ý quán ăn -->
+    <div id="area-selection">
+      <h3>Gợi Ý Quán Ăn</h3>
+      <p>Chọn khu vực bạn muốn:</p>
+      <select id="areaSelect">
+        <option value="go-vap">Gò Vấp</option>
+        <option value="thu-duc">Thủ Đức</option>
+        <option value="binh-thanh">Bình Thạnh</option>
+      </select>
+      <button id="suggestRestaurantBtn">Gợi Ý Quán</button>
+      <div id="restaurantsList"></div>
+    </div>
+
+    <hr>
+
+    <!-- Phần gợi ý khẩu phần ăn -->
+    <div id="portion-selection">
+      <h3>Gợi Ý Khẩu Phần</h3>
+      <p>Chọn khẩu phần ăn:</p>
+      <select id="portionSelect">
+        <option value="single">Ăn 1 mình</option>
+        <option value="couple">Cặp đôi</option>
+        <option value="smallFamily">Gia đình nhỏ (4-5 người)</option>
+        <option value="largeGroup">Đoàn khách lớn (10-12 người)</option>
+      </select>
+      <button id="suggestPortionBtn">Gợi Ý Khẩu Phần</button>
+      <div id="portionSuggestions"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Giới Thiệu Bánh Xèo </p>
+  </footer>
+</body>
+</html>
