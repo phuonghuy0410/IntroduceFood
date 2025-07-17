@@ -18,27 +18,29 @@
     </nav>
   </header>
 
-  <section id="suggestion">
-    <h2>Gợi Ý Quán Ăn & Khẩu Phần</h2>
+<section id="suggestion">
+  <h2>Gợi Ý Quán Ăn & Khẩu Phần</h2>
 
-    <!-- Phần gợi ý quán ăn -->
-    <div id="area-selection">
-      <h3>Gợi Ý Quán Ăn</h3>
+  <div class="suggestion-grid">
+
+    <!-- Gợi ý quán ăn -->
+    <div class="suggestion-box">
+      <h3>🍽️ Danh Sách Các Quán Bánh Xèo Non</h3>
       <p>Chọn khu vực bạn muốn:</p>
       <select id="areaSelect">
         <option value="go-vap">Gò Vấp</option>
         <option value="thu-duc">Thủ Đức</option>
         <option value="binh-thanh">Bình Thạnh</option>
+        <option value="quan-1">Quận 1</option>
+        <option value="quan-3">Quận 3</option>
       </select>
-      <button id="suggestRestaurantBtn">Gợi Ý Quán</button>
-      <div id="restaurantsList"></div>
+      <button id="suggestRestaurantBtn" class="suggestion-btn">Tìm kiếm </button>
+      <div id="restaurantsList" class="suggestion-result"></div>
     </div>
 
-    <hr>
-
-    <!-- Phần gợi ý khẩu phần ăn -->
-    <div id="portion-selection">
-      <h3>Gợi Ý Khẩu Phần</h3>
+    <!-- Gợi ý khẩu phần -->
+    <div class="suggestion-box">
+      <h3>👨‍👩‍👧‍👦 Gợi Ý Khẩu Phần</h3>
       <p>Chọn khẩu phần ăn:</p>
       <select id="portionSelect">
         <option value="single">Ăn 1 mình</option>
@@ -46,11 +48,12 @@
         <option value="smallFamily">Gia đình nhỏ (4-5 người)</option>
         <option value="largeGroup">Đoàn khách lớn (10-12 người)</option>
       </select>
-      <button id="suggestPortionBtn">Gợi Ý Khẩu Phần</button>
-      <div id="portionSuggestions"></div>
+    
+      <div id="portionSuggestions" class="suggestion-result"></div>
     </div>
-  </section>
 
+  </div>
+</section>
   <footer>
     <p>© 2025 Giới Thiệu Bánh Xèo </p>
   </footer>
