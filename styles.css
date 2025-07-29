@@ -236,3 +236,24 @@ select {
 .suggestion-result li {
   margin-bottom: 8px;
 }
+
+* Định dạng ảnh quán trong danh sách quán */
+.suggestion-result ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.suggestion-result li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 15px;
+}
+
+.suggestion-result li img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
