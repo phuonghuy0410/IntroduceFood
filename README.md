@@ -1,4 +1,4 @@
-# Trang Web Giới Thiệu Bánh Xèo
+# Trang Web Giới Thiệu Món Ăn Bánh Xèo
 Đây là một trang web giới thiệu về món bánh xèo - món ăn truyền thống đặc sắc của Việt Nam. Trang web cung cấp thông tin về nguồn gốc, nguyên liệu, cách làm, và các hình ảnh minh họa hấp dẫn.
 ## Công nghệ sử dụng
 - HTML5
