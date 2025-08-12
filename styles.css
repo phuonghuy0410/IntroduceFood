@@ -223,7 +223,7 @@ select {
   margin-bottom: 8px;
 }
 
-* Định dạng ảnh quán trong danh sách quán */
+/* Định dạng ảnh quán trong danh sách quán */
 .suggestion-result ul {
   list-style: none;
   padding-left: 0;
