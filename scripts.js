@@ -1,7 +1,8 @@
 // Khi tài liệu HTML đã tải xong hoàn toàn, chạy đoạn mã bên trong
 document.addEventListener('DOMContentLoaded', function () {
 
-  // 👉 Dữ liệu các quán bánh xèo theo từng khu vực (dạng object)
+  //  Dữ liệu các quán bánh xèo theo từng khu vực (dạng object)
+  // Mỗi khu vực là một key, giá trị là mảng các quán ăn
   const restaurants = {
     "go-vap": [
       {
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ]
   };
 
-  // 👉 Gợi ý khẩu phần ăn dựa theo nhóm người dùng (1 người, cặp đôi, gia đình nhỏ, nhóm lớn)
+  //Gợi ý khẩu phần ăn dựa theo nhóm người dùng (1 người, cặp đôi, gia đình nhỏ, nhóm lớn)
+  //Mỗi nhóm là một key, giá trị là mảng các câu gợi ý
   const portionSuggestions = {
     "single": [
       "Nếu bạn ăn một mình và muốn thưởng thức trọn vẹn hương vị của bánh xèo, khẩu phần hợp lý là từ 2–3 cái bánh xèo vừa. Bạn có thể chọn loại nhân tùy thích nhưng phổ biến nhất là:",
@@ -61,12 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
     ]
   };
 
-  // 👉 Lấy các phần tử DOM dùng cho tính năng gợi ý quán ăn
+  // Lấy các phần tử DOM dùng cho tính năng gợi ý quán ăn
   const suggestRestaurantBtn = document.getElementById('suggestRestaurantBtn'); // Nút gợi ý
   const areaSelect = document.getElementById('areaSelect'); // Dropdown chọn khu vực
   const restaurantsList = document.getElementById('restaurantsList'); // Div hiển thị danh sách quán ăn
 
-  // 👉 Gắn sự kiện click cho nút "Gợi ý quán ăn"
+  // Gắn sự kiện click cho nút "Gợi ý quán ăn"
   suggestRestaurantBtn.addEventListener('click', function () {
     const selectedArea = areaSelect.value; // Lấy khu vực đã chọn
     const selectedRestaurants = restaurants[selectedArea]; // Lấy danh sách quán ứng với khu vực
@@ -107,15 +109,17 @@ document.addEventListener('DOMContentLoaded', function () {
     restaurantsList.appendChild(ul);
   });
 
-  // 👉 Lấy các phần tử DOM dùng cho tính năng gợi ý khẩu phần
+  //Lấy các phần tử DOM dùng cho tính năng gợi ý khẩu phần
   const portionSelect = document.getElementById('portionSelect'); // Dropdown chọn nhóm người ăn
   const portionSuggestionsDiv = document.getElementById('portionSuggestions'); // Div hiển thị gợi ý khẩu phần
 
-  // 👉 Gắn sự kiện thay đổi khi người dùng chọn nhóm (1 người, cặp đôi,...)
+  //Gắn sự kiện thay đổi khi người dùng chọn nhóm (1 người, cặp đôi,...)
   portionSelect.addEventListener('change', function () {
     const selectedPortion = portionSelect.value; // Lấy loại nhóm được chọn
     const selectedSuggestions = portionSuggestions[selectedPortion]; // Lấy gợi ý tương ứng
-
+//Người dùng đổi lựa chọn trong dropdown →
+    //  Sự kiện 'change' kích hoạt → Lấy value của lựa chọn đó → 
+    // Tra cứu object portionSuggestions để lấy danh sách gợi ý phù hợp.
     // Tạo tiêu đề phần gợi ý
     portionSuggestionsDiv.innerHTML = `<h4>Gợi Ý Khẩu Phần cho ${portionSelect.options[portionSelect.selectedIndex].text}:</h4>`;
 
